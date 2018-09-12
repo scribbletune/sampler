@@ -19,21 +19,15 @@ scribble.clip({
 scribble.clip({
 	notes: getNotes(key, 4, scale),
 	pattern: 'xx[-x]'.repeat(3) + 'xx[xx]',
-	// In the following method '/samples/' is explicitly set as the second argument
-	// because we are using a custom location for it
-	// In most cases you ll just clone this repo in your public/ folder and if you did that, 
-	// the default location would be used and you wont need to specify the second argument
-	sampler: getSampler('superSaw', '/samples/')
+	sampler: getSampler('superSaw', '/samples/'),
+	volume: -18,
+	effects: ['Chorus']
 }).start();
 
 
 scribble.clip({
 	notes: scribble.progression(key + '3 ' + scale, 'i VII VI VII'),
 	pattern: 'x-xx-',
-	// In the following method '/samples/' is explicitly set as the second argument
-	// because we are using a custom location for it
-	// In most cases you ll just clone this repo in your public/ folder and if you did that, 
-	// the default location would be used and you wont need to specify the second argument
 	sampler: getSampler('piano', '/samples/')
 }).start();
 
