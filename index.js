@@ -78,6 +78,6 @@ const samplers = {
 	}
 };
 
-function getSampler(sampler, baseUrl = '/samplers/samples/') {
-	return new Tone.Sampler(samplers[sampler], () => {}, baseUrl).toMaster();
+function getSampler(sampler) {
+	return new Tone.Sampler(samplers[sampler], () => {}, '/samplers/samples/').toMaster();
 }
