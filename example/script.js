@@ -31,6 +31,13 @@ scribble.clip({
 	sampler: getSampler('piano', '/samples/')
 }).start();
 
+scribble.clip({
+	notes: 'bb4 bb4 bb4 c4 bb4 bb4 bb4 db4',
+	pattern: '--------[xx]',
+	sampler: getSampler('ciriusRez', '/samples/'),
+	effects: ['PingPongDelay']
+}).start();
+
 
 Tone.Transport.bpm.value = 145;
 document.querySelector('#startBtn').addEventListener('click', function() {

@@ -145,6 +145,31 @@ const samplers = {
 		'gb4': 'korgBass/gb4-67.wav',
 		'gb5': 'korgBass/gb5-79.wav',
 		'gb6': 'korgBass/gb6-91.wav'
+	},
+
+	ciriusRez: {
+		'a3': 'ciriusRez/a3.wav',
+		'a4': 'ciriusRez/a4.wav',
+		'b3': 'ciriusRez/b3.wav',
+		'b4': 'ciriusRez/b4.wav',
+		'bb3': 'ciriusRez/bb3.wav',
+		'bb4': 'ciriusRez/bb4.wav',
+		'c3': 'ciriusRez/c3.wav',
+		'c4': 'ciriusRez/c4.wav',
+		'd3': 'ciriusRez/d3.wav',
+		'd4': 'ciriusRez/d4.wav',
+		'db3': 'ciriusRez/db3.wav',
+		'db4': 'ciriusRez/db4.wav',
+		'e3': 'ciriusRez/e3.wav',
+		'e4': 'ciriusRez/e4.wav',
+		'eb3': 'ciriusRez/eb3.wav',
+		'eb4': 'ciriusRez/eb4.wav',
+		'f3': 'ciriusRez/f3.wav',
+		'f4': 'ciriusRez/f4.wav',
+		'g3': 'ciriusRez/g3.wav',
+		'g4': 'ciriusRez/g4.wav',
+		'gb3': 'ciriusRez/gb3.wav',
+		'gb4': 'ciriusRez/gb4.wav'
 	}
 };
 
