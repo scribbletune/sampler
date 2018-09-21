@@ -1,12 +1,12 @@
 
-# samplers [WIP]
+# sampler [WIP]
 Rudimentary samplers, [few Tone.js synths](http://tonejs.github.io/Presets/) and sounds for Scribbletune
 
 #### How to use
 
 Clone this repo in your public folder of your server. As of now it exposes a couple of global methods that you can use. 
 
-### Samplers
+### Sampler
 These are sampled wav files mapped to notes and are free to use in your projects. You can use these in your `clip` method with the global `getSampler` method
 
 ```
