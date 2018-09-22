@@ -170,6 +170,31 @@ const samplers = {
 		'g4': 'ciriusRez/g4.wav',
 		'gb3': 'ciriusRez/gb3.wav',
 		'gb4': 'ciriusRez/gb4.wav'
+	},
+
+	celestialPad: {
+		'a3': 'celestialPad/a3.wav',
+		'a4': 'celestialPad/a4.wav',
+		'b3': 'celestialPad/b3.wav',
+		'b4': 'celestialPad/b4.wav',
+		'bb3': 'celestialPad/bb3.wav',
+		'bb4': 'celestialPad/bb4.wav',
+		'c3': 'celestialPad/c3.wav',
+		'c4': 'celestialPad/c4.wav',
+		'd3': 'celestialPad/d3.wav',
+		'd4': 'celestialPad/d4.wav',
+		'db3': 'celestialPad/db3.wav',
+		'db4': 'celestialPad/db4.wav',
+		'e3': 'celestialPad/e3.wav',
+		'e4': 'celestialPad/e4.wav',
+		'eb3': 'celestialPad/eb3.wav',
+		'eb4': 'celestialPad/eb4.wav',
+		'f3': 'celestialPad/f3.wav',
+		'f4': 'celestialPad/f4.wav',
+		'g3': 'celestialPad/g3.wav',
+		'g4': 'celestialPad/g4.wav',
+		'gb3': 'celestialPad/gb3.wav',
+		'gb4': 'celestialPad/gb4.wav'
 	}
 };
 
