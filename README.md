@@ -1,6 +1,6 @@
 
 # sampler [WIP]
-Rudimentary samplers, [few Tone.js synths](http://tonejs.github.io/Presets/) and sounds for Scribbletune
+Samplers, [Tone.js mono synths](http://tonejs.github.io/Presets/) and sounds for Scribbletune Live!
 
 #### How to use
 
@@ -13,18 +13,22 @@ These are sampled wav files mapped to notes and are free to use in your projects
 scribble.clip({
 	notes: 'C4',
 	pattern: 'x',
-	sampler: getSampler('piano', '/samples/')
+	sampler: getSampler('piano') // a second param can be provided for the path for serving the samples
 }).start();
 ```
 You can substitute `piano` to any of the following:
-- superSaw
+- celestialPad
+- ciriusRez
+- epicTranceLead
+- jarblePerator
 - korgBass
 - piano
-- ciriusRez
+- psyTranceBass
+- superSaw
 
 ### Tone MonoSynths
 
-For synth presets of Tone.js, I ve put together few of these for you to use by calling the `getToneMonoSynth` method in your scripts while creating clips with an `instrument`.
+For synth presets of Tone.js, I ve put together few of these for you to use by calling the global `getToneMonoSynth` method in your scripts while creating clips with an `instrument`. Make sure to pull the tone-mono-synths.js file in your HTML via a SCRIPT tag.
 
 ```
 scribble.clip({

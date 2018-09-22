@@ -39,6 +39,11 @@ scribble.clip({
 	effects: ['PingPongDelay']
 }).start();
 
+scribble.clip({
+	notes: getNotes(key, 3, scale),
+	pattern: 'xx[-x]'.repeat(3) + 'xx[xx]',
+	sampler: getSampler('epicTranceLead', '/samples/'),
+}).start();
 
 Tone.Transport.bpm.value = 145;
 document.querySelector('#startBtn').addEventListener('click', function() {
