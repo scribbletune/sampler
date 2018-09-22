@@ -1,3 +1,11 @@
+const getSampler = (sampler, baseUrl) => {
+  return new Promise(resolve => {
+    var smplr = new Tone.Sampler(samplers[sampler], function() { 
+      return resolve(smplr);
+    }, baseUrl || '/sampler/samples/');
+  });
+}
+
 const samplers = {
   piano: {
     'C3' : 'piano/piano48.wav',
@@ -275,8 +283,3 @@ const samplers = {
     'gb2': 'psyTranceBass/gb2.wav'
   }
 };
-
-function getSampler(sampler, baseUrl) {
-  return new Tone.Sampler(samplers[sampler], () => {}, baseUrl || '/sampler/samples/');
-}
-
