@@ -1,4 +1,4 @@
-(async () => {
+(async (DOC, scribble, Tone) => {
 	const key = 'F';
 	const scale = 'minor';
 
@@ -10,7 +10,7 @@
 	scribble.clip({
 		notes: getNotes(key, 3, scale),
 		pattern: '[xx]',
-		instrument: getToneMonoSynth('MonoSynth:BassGuitar') 
+		instrument: getToneMonoSynth('MonoSynth:BassGuitar')
 	}).start();
 
 	scribble.clip({
@@ -18,14 +18,13 @@
 		pattern: 'xx[-x]'.repeat(3) + 'xx[xx]',
 		// In the following method '/samples/' is explicitly set as the second argument
 		// because we are using a custom location for it
-		// In most cases you ll just clone this repo in your public/ folder and if you did that, 
+		// In most cases you'll just clone this repo in your public/ folder and if you did that,
 		// the default location would be used and you wont need to specify the second argument
 		// sampler: await getSampler('korgBass', '/samples/')
 		sampler: await getSampler('superSaw', '/samples/'),
 		volume: -18,
 		effects: ['Chorus']
 	}).start();
-
 
 	scribble.clip({
 		notes: scribble.progression(key + '3 ' + scale, 'i VII VI VII'),
@@ -48,17 +47,15 @@
 
 	Tone.Transport.bpm.value = 145;
 
-	const btnStart = document.createElement('button');
-	btnStart.innerHTML = 'Start';
-	document.body.appendChild(btnStart);
-	btnStart.onclick = function() {
-		Tone.Transport.start();
-	};
+	createButtonClick('Start', ev => Tone.Transport.start());
+	createButtonClick('Stop',  ev => Tone.Transport.stop() );
 
-	const btnStop = document.createElement('button');
-	btnStop.innerHTML = 'Stop';
-	document.body.appendChild(btnStop);
-	btnStop.onclick = function() {
-		Tone.Transport.stop();
-	};
-})();
+	function createButtonClick(label, eventHandler) {
+		const button = DOC.createElement('button');
+		button.innerHTML = label;
+		button.onclick = ev => eventHandler(ev); // Tone.Transport[ callbackFn ]();
+
+		DOC.body.appendChild(button);
+	}
+
+})(window.document, window.scribble, window.Tone);
