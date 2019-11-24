@@ -1,6 +1,8 @@
 const getSampler = (sampler, baseUrl='/sampler/samples/') => {
   return new Promise(resolve => {
-    const smplr = new Tone.Sampler(samplers[sampler], function() { 
+    const smplr = new Tone.Sampler(samplers[sampler], function() {
+      smplr.x_name = sampler;
+      smplr.x_baseUrl = baseUrl;
       return resolve(smplr);
     }, baseUrl);
   });
