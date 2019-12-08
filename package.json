@@ -1,0 +1,20 @@
+{
+  "private": true,
+  "name": "@scribbletune/sampler",
+  "version": "1.0.0",
+  "description": "[WIP] Samplers, Tone.js mono synths and sounds for Scribbletune Live!",
+  "main": "./index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/scribbletune/sampler.git"
+  },
+  "author": "Walmik Deshpande",
+  "license": "MIT",
+  "scripts": {
+    "start": "npx live-server --port=9001 --no-browser # -> /example/"
+  },
+  "peerDependencies": {
+    "tone": "^13.8.28",
+    "live-server": "^1.2.1"
+  }
+}
